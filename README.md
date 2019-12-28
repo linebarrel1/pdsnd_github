@@ -8,9 +8,9 @@ Bikesharing project Udacity
 Investigates bikesharing data for 3 cities in the United States and computes statistics about them.
 
 ### Files used
-chicago.csv
-new_york_city.csv
-washington.csv
+1. chicago.csv
+2. new_york_city.csv
+3. washington.csv
 
 ### Credits
 1. https://pandas.pydata.org
