@@ -1,6 +1,5 @@
 import time
 import pandas as pd
-import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -151,7 +150,6 @@ def trip_duration_stats(df):
     total_trip_duration = df['Trip Duration'].sum()
     print('Total travel time: \n')
     print(total_trip_duration/60/60/24, 'days')
-
 
     # display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
