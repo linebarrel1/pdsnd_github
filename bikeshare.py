@@ -1,7 +1,6 @@
 # import modules
 import time
 import pandas as pd
-import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -44,6 +43,7 @@ def get_filters():
             continue
         else:
             break
+
 
     # print separating line
     print('-'*40)
@@ -149,19 +149,10 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    #Get seconds to readable format
-    def secs_to_read_time(seconds):
-        m, s = divmod(seconds,60)
-        h, m = divmod(m, 60)
-        d, h = divmod(h, 24)
-        y, d = divmod(d, 365)
-        print('Years: {}, Days: {}, Hours: {}, Seconds: {}'.format(y,d,h,m,s))
-
     # display total travel time
     total_trip_duration = df['Trip Duration'].sum()
     print('Total travel time: \n')
-    secs_to_read_time(total_trip_duration)
-
+    print(total_trip_duration/60/60/24, 'days')
 
     # display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
